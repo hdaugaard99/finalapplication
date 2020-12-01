@@ -1,0 +1,29 @@
+{
+"background_color": "#EDF6FF",
+
+"description": "This app helps you evaluate your budget and highlights areas of your spending that could be improved.",
+
+"dir": "ltr",
+
+"lang": "en-US",
+
+"display": "fullscreen",
+
+"name": "Budget Evaluator: Change your Spending",
+
+"orientation": "portrait",
+
+"prefer_related_applications": false,
+
+"short_name": "Budget Evaluator",
+	
+"icons": [
+	{
+		"src": "appicon.png",
+		"sizes": "192x192",
+		"type": "image/png"
+	}
+],
+
+"start_url": "/index.html"
+}

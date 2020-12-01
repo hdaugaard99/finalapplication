@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="mediaqueries.css">
+<link rel="stylesheet" href="https://use.typekit.net/qvf6guu.css">
+<link rel="manifest" href="manifest.json">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="piechart.js"></script>
+</head>
+
+<body>
+	<h1 id="banner">App Name</h1>
+	
+	<form name="questions">
+	<div id="income">
+		<p>First of all, to get an accurate picture of your financial situation, we need to know about how much you earn in a year.</p>
+		<label>$</label><input type="number" name="income" id="q1" required/><br><br>
+		<input type="button" name="incomeSubmit" value="Next Question" onclick="WriteIncome();">
+		
+	</div>
+	
+	<div id="numOfPeople" hidden>
+		<p>How many people live in your household?</p>
+		<input type="number" name="people" id="q2" required/><br><br>
+		<input type="button" name="numOfPeopleSubmit" value="Next Question" onclick="WritePeople();">
+		
+	</div>
+	
+	<div id="state" hidden>
+		<p>What state do you live in?</p>
+		<select id="states" name="state" required>
+			<option value="---">---</option>
+			<option value="Alabama">Alabama</option>
+			<option value="Alaska">Alaska</option>		
+			<option value="Arizona">Arizona</option>
+			<option value="Arkansas">Arkansas</option>
+			<option value="California">California</option>
+			<option value="Colorado">Colorado</option>
+			<option value="Connecticut">Connecticut</option>
+			<option value="Delaware">Delaware</option>
+			<option value="District of Columbia">District of Columbia</option>
+			<option value="Florida">Florida</option>
+			<option value="Georgia">Georgia</option>
+			<option value="Hawaii">Hawaii</option>
+			<option value="Idaho">Idaho</option>
+			<option value="Illinois">Illinois</option>
+			<option value="Indiana">Indiana</option>
+			<option value="Iowa">Iowa</option>
+			<option value="Kansas">Kansas</option>
+			<option value="Kentucky">Kentucky</option>
+			<option value="Louisiana">Louisiana</option>
+			<option value="Maine">Maine</option>
+			<option value="Maryland">Maryland</option>
+			<option value="Massachusetts">Massachusetts</option>
+			<option value="Michigan">Michigan</option>
+			<option value="Minnesota">Minnesota</option>
+			<option value="Mississippi">Mississippi</option>
+			<option value="Missouri">Missouri</option>
+			<option value="Montana">Montana</option>
+			<option value="Nebraska">Nebraska</option>
+			<option value="Nevada">Nevada</option>
+			<option value="New Hampshire">New Hampshire</option>
+			<option value="New Jersey">New Jersey</option>
+			<option value="New Mexico">New Mexico</option>
+			<option value="New York">New York</option>
+			<option value="North Carolina">North Carolina</option>
+			<option value="North Dakota">North Dakota</option>
+			<option value="Ohio">Ohio</option>
+			<option value="Oklahoma">Oklahoma</option>
+			<option value="Oregon">Oregon</option>
+			<option value="Pennsylvania">Pennsylvania</option>
+			<option value="Rhode Island">Rhode Island</option>
+			<option value="South Carolina">South Carolina</option>
+			<option value="South Dakota">South Dakota</option>
+			<option value="Tennessee">Tennessee</option>
+			<option value="Texas">Texas</option>
+			<option value="Utah">Utah</option>
+			<option value="Vermont">Vermont</option>
+			<option value="Virginia">Virginia</option>
+			<option value="Washington">Washington</option>
+			<option value="West Virginia">West Virginia</option>
+			<option value="Wisconsin">Wisconsin</option>
+			<option value="Wyoming">Wyoming</option></select><br><br>
+		<input type="button" name="stateSubmit" value="Next Question" onclick="WriteState();">
+	</div>
+	
+	<div id="grocerySpending" hidden>
+		<p>About how much do you spend on groceries/food each month?</p>
+		<label>$</label><input type="number" name="groceries" id="q3" required/><br><br>
+		<input type="button" name="grocerySubmit" value="Next Question" onclick="WriteGroceries();">
+	</div>
+	
+	<div id="gasSpending" hidden>
+		<p>About how much do you spend on gas each month?</p>
+		<label>$</label><input type="number" name="gas" id="q4" required/><br><br>
+		<input type="button" name="gasSubmit" value="Next Question" onclick="WriteGas();">
+	</div>
+	
+	<div id="homeSpending" hidden>
+		<p>About how much do you spendon home related expenses each month? (i.e. rent, house payment, home insurance, utility bills, etc.)</p>
+		<label>$</label><input type="number" name="home" id="q5" required/><br><br>
+		<input type="button" name="homeSubmit" value="Next Question" onclick="WriteHome();">
+	</div>
+	
+	<div id="payments" hidden>
+		<p>About how much do you spend on payments for purchases you've made (i.e. credit card, car payments, etc.)</p>
+		<label>$</label><input type="number" id="q6" name="payments" required/><br><br>
+		<input type="button" name="paymentSubmit" value="Next Question" onclick="WritePayments();">
+	</div>
+	
+	<div id="entertainmentSpending" hidden>
+		<p>About how much do you spend on entertainment each month? (i.e. video streaming services, video games, cable, movie tickets, bowling, etc.)</p>
+		<label>$</label><input type="number" name="entertainment" id="q7" required/><br><br>
+		<input type="button" name="entertainmentSubmit" value="Next Question" onclick="WriteEntertainment();">
+	</div>
+	
+	<div id="savingsAccount" hidden>
+		<p>On average, how much do you put into a dedicated savings account each month?</p>
+		<label>$</label>
+		<input type="number"  name="savings" id="q8" required><br><br>
+		<input type="button" name="savingsAccountSubmit" value="Next Question" onclick="WriteSavings();">
+	</div>
+	
+	
+	<div id="longTermGoal" hidden>
+		<p>What is your long-term savings goal?</p>
+		<label>$</label><input type="number" name="longTermGoal"><br><br>
+		<input type="button" name="longTermGoalSubmit" value="Next Question" onclick="WriteLongTermGoal();">
+	</div>
+	
+	<div id="shortTermGoal" hidden>
+		<p>What is your short-term savings goal?</p>
+		<label>$</label><input type="number" name="shortTermGoal"><br><br>
+		<input type="button" name="shortTermGoalSubmit" value="Finish Budget Profile" onclick="WriteShortTermGoal();">
+	</div>
+		
+	<div id="submitProfile" hidden>
+		<input type="button" name="submitProfile" value="Create Budget Profile" onclick="window.location.href='spendingchart.html'">
+	</div>
+	</form>
+
+<script src="questions.js"></script>
+<script src="cookies.js"></script>
+<script src="scripts.js"></script>
+<script src="cache.js"></script>
+</body>
+</html>

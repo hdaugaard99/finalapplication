@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type= "text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="mediaqueries.css">
+<link rel="stylesheet" href="https://use.typekit.net/qvf6guu.css">
+<link rel="manifest" href="manifest.json">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<h1 id="banner">App Name</h1>
+	<div class="topnav" id="myTopnav">
+  <a href="spendingchart.html" class="active">Spending Chart</a>
+  <a href="expenses.html">Expenses</a>
+  <a href="analysis.html">Analysis</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+	
+	<h1>Analysis</h1>
+	
+<div class="analysisCard">
+	<h3>Groceries</h3>
+	<p id="groceriesAnalysis"></p>
+	
+	<form><input type="button" name="groceriesInfo" value="More Info"></form>
+</div>
+	
+<div id="groceries" class="breakdown popupForm" hidden><div class="addExpenseContent">
+	<h3>Groceries</h3><br>
+	<p id="groceriesInput"></p>
+	<form><input type="button" id="groceriesClose"  name="groceriesClose" value="Close"></form>
+</div></div><br><br>
+	
+<div class="analysisCard">
+	<h3>Gas</h3>
+	<p id="gasAnalysis"></p>
+	<form><input type="button" name="gasInfo" value="More Info"></form>
+</div>
+	
+<div id="gas" class="breakdown popupForm" hidden><div class="addExpenseContent">
+	<h3>Gas</h3><br>
+	<p id="gasInput"></p>
+	<form><input type="button" id="gasClose" value="Close"></form>
+</div></div><br><br>
+	
+<div class="analysisCard">
+	<h3>Payments</h3>
+	<p id="paymentsAnalysis"></p>
+	<form><input type="button" name="paymentsInfo" value="More Info"></form>
+</div>
+	
+<div id="payments" class="breakdown popupForm" hidden><div class="addExpenseContent">
+	<h3>Payments</h3><br>
+	<p id="paymentsInput"></p>
+	<form><input type="button" id="paymentsClose" value="Close"></form>
+</div></div><br><br>
+	
+<div class="analysisCard">
+	<h3>Entertainment</h3>
+	<p id="entertainmentAnalysis"></p>
+	<form><input type="button" name="entertainmentInfo" value="More Info"></form>
+</div>
+	
+<div id="entertainment" class="breakdown popupForm" hidden><div class="addExpenseContent">
+	<h3>Entertainment</h3><br>
+	<p id="entertainmentInput"></p>
+	<form><input type="button" id="entertainmentClose" value="Close"></form>
+</div></div><br><br>
+	
+<script src="cookies.js"></script>
+<script src="analysis.js"></script>
+<script src="scripts.js"></script>
+<script src="cache.js"></script>
+</body>
+</html>

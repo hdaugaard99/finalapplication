@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	background-color: #EDF6FF;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	height: 100%;
+	margin: 0;
+}
+
+.add-button {
+	position: absolute;
+	top: 1px;
+	left: 1px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #E9D9FF;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #5B00A7;
+  color: #f2f2f2;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #5B00A7;
+	color: #f2f2f2;
+ 
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+}
+
+#index {
+	background-image: linear-gradient(#1FAEE4, #6A12AC);
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+#banner {
+	margin: 0;
+	width: 100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	font-family: rig-solid-bold-halftone, Arial, sans-serif;
+	color: white;
+	font-size: 6em;
+	text-align: center;
+	background-image: linear-gradient(#1FAEE4, #6A12AC);
+}
+
+#title {
+	font-family: rig-solid-bold-halftone, Arial, sans-serif;
+	font-size: 10em;
+	text-align: center;
+	color: white;
+}
+
+h2 {
+	font-size: 4em;
+	text-align: center;
+}
+
+#start {
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+/* Form styles */
+
+form {
+	text-align: center;
+}
+
+form p {
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+form label {
+	font-size: 32px;
+}
+
+button {
+	border-radius: 30px;
+	text-decoration: none;
+	border: none;
+	background-color: #1FAEE4;
+	color: white;
+}
+
+input[type="number"] {
+	font-size: 26px;
+	margin-top: 10%;
+}
+
+input[type="number"] {
+	font-size: 26px;
+	margin-top: 10%;
+}
+
+form[name="questions"] input[type="button"] {
+	margin-top: 10%;
+}
+
+input[type="button"] {
+	border-radius: 30px;
+	text-decoration: none;
+	border: none;
+	background-color: #1FAEE4;
+	color: white;
+	font-size: 28px;
+	text-align: center;
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+#piechart {
+	width: 90%;
+	height: 65%;
+	margin-left: 5%;
+	margin-right: 5%;
+	
+}
+
+
+
+.expenseCard {
+	width: 40%;
+	margin-left: 3%;
+	margin-bottom: 2%;
+	background-color: white;
+	
+}
+
+.expenseCard h3 {
+	margin: 0;
+	padding: 0;
+	margin-left: 2%;
+	font-size: 32px;
+	display: inline-block;
+}
+
+.expenseCard p {
+	font-size: 24px;
+	
+	margin-right: 2%;
+	
+}
+
+.expenseCard td {
+	width: 91%;
+}
+
+.breakdown {
+	background-color: white;
+	width: 40%;
+	margin-right: 3%;
+	float: right;
+}
+
+.breakdown h3 {
+	margin: 0;
+	paddding: 0;
+	margin-left: 2%;
+	font-size: 32px;
+	display: inline-block;
+}
+
+.breakdown .bold {
+	font-size: 24px;
+	display: inline-block;
+	margin-left: 2%;
+	font-weight: bold;
+}
+
+.breakdown .normal {
+	font-size: 24px;
+	display: inline-block;
+	padding-left: 69%;
+	margin-right: 2%;
+}
+
+.analysisCard {
+	width: 40%;
+	margin-left: 3%;
+	background-color: white;
+	display: inline-block;
+	
+}
+
+.analysisCard h3 {
+	margin: 0;
+	padding: 0;
+	margin-left: 2%;
+	font-size: 32px;
+}
+
+.analysisCard p {
+	margin: 0;
+	margin-top: 5px;
+	font-size: 24px;
+	margin-left: 2%;
+}
+
+.analysisCard input[type="button"] {
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.popupForm {
+	display: none; /* Hidden by default */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.addExpenseContent {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+

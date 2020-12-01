@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type= "text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="mediaqueries.css">
+<link rel="stylesheet" href="https://use.typekit.net/qvf6guu.css">
+<link rel="manifest" href="manifest.json">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+<h1 id="banner">App Name</h1>
+	<div class="topnav" id="myTopnav">
+  <a href="spendingchart.html" class="active">Spending Chart</a>
+  <a href="expenses.html">Expenses</a>
+  <a href="analysis.html">Analysis</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+		
+		
+	
+<h1>Expenses</h1>
+
+<div class="expenseCard">
+	<table>
+		<tr>
+			<td>
+				<h3>Savings</h3>
+			</td><td>
+				<p>$100</p>
+			</td>
+		</tr>
+	</table>
+	<form><input type="button" name="savingsBreakdown" value="See Breakdown"></form>
+</div>
+	
+<div class="expenseCard">
+	<table>
+		<tr>
+			<td>
+				<h3>Groceries</h3>
+			</td><td>
+				<p id="groceriesAmt"></p>
+			</td>
+		</tr>
+	</table>
+	<form><input type="button" name="groceriesExpand" value="See Breakdown"></form>
+</div>
+
+
+<div id="groceriesExpand" class="breakdown popupForm" hidden><div class="addExpenseContent">
+	<h3>Groceries Breakdown</h3><br>
+	<p class="bold">Total</p>
+	
+	<p class="normal" id="groceriesBreak"></p>
+	<div id="groceriesBreakdown"></div>
+	<form><input type="button" name="groceriesAdd" id="groceriesAddBtn" value="Add Expense"><input type="button" name="closeGrocerieBreakDown" value="close" id="groceriesClose"></form>
+</div></div>
+	
+<div class="popupForm" id="groceriesAdd">
+	<div class="addExpenseContent">
+	<form name="newGrocery">
+		<h3>Add Expense</h3>
+		
+		<label for="store">Store or Website</label>
+		<input type="text" placeholder="Store Name" name="store" required><br>
+		
+		<label for="amount">Amount</label>
+		<input type="number" placeholder="Amount" name="amount" required>
+		
+		<button type="button" onclick="addGroceriesExpense();">Submit</button>
+		<input type="button" name="closeGroceriesAdd" value="close" id="closeGroceriesAdd">
+	</form>
+	</div>
+</div>
+	
+	
+<div class="expenseCard">
+	<table>
+		<tr>
+			<td>
+				<h3>Gas</h3>
+			</td><td>
+				<p id="gasAmt"></p>
+			</td>
+		</tr>
+	</table>
+	<form><input type="button" name="gasExpand" value="See Breakdown"></form>
+</div>
+
+<div id="gasExpand" class="breakdown popupForm" hidden><div class="addExpenseContent">
+	<h3>Gas Breakdown</h3><br>
+	<p class="bold">Total</p>
+	<p class="normal" id="gasBreak"></p>
+	<div id="gasBreakdown"></div>
+	<form><input type="button" name="gasAddBtn" value="Add Expense" onclick="gasAddPopup();">
+	<input type="button" name="closeGasBreakDown" value="close" id="gasClose"></form>
+</div></div>
+	
+<div class="popupForm" id="gasAdd">
+	<div class="addExpenseContent">
+	<form name="newGas">
+		<h3>Add Expense</h3>
+		
+		<label for="store">Store or Website</label>
+		<input type="text" placeholder="Store Name" name="store" required><br>
+		
+		<label for="amount">Amount</label>
+		<input type="number" placeholder="Amount" name="amount" required>
+		
+		<button type="button" onclick="addGasExpense();">Submit</button>
+		<input type="button" name="closeGasAdd" value="close" id="closeGasAdd">
+	</form>
+	</div>
+</div>
+
+	
+<div class="expenseCard">
+	<table>
+		<tr>
+			<td>
+				<h3>Payments</h3>
+			</td><td>
+				<p id="paymentsAmt"></p>
+			</td>
+		</tr>
+	</table>
+	<form><input type="button" name="paymentsExpand" value="See Breakdown"></form>
+</div>
+
+
+<div id="paymentsExpand" class="breakdown popupForm" hidden><div class="addExpenseContent">
+	<h3>Payments Breakdown</h3><br>
+	<p class="bold">Total</p>
+	<p class="normal" id="paymentsBreak"></p>
+	<div id="paymentsBreakdown"></div>
+	<form><input type="button" name="paymentsAddBtn" value="Add Expense" onclick="paymentsAddPopup();">
+	<input type="button" name="closePaymentsBreakDown" value="close" id="paymentsClose"></form>
+</div></div>
+	
+<div class="popupForm" id="paymentsAdd">
+	<div class="addExpenseContent">
+	<form name="newPayments">
+		<h3>Add Expense</h3>
+		
+		<label for="store">Store or Website</label>
+		<input type="text" placeholder="Store Name" name="store" required><br>
+		
+		<label for="amount">Amount</label>
+		<input type="number" placeholder="Amount" name="amount" required>
+		
+		<button type="button" onclick="addPaymentsExpense();">Submit</button>
+		<input type="button" name="closePaymentsAdd" value="close" id="closePaymentsAdd">
+	</form>
+	</div>
+</div>
+	
+	
+<div class="expenseCard">
+	<table>
+		<tr>
+			<td>
+				<h3>Entertainment</h3>
+			</td><td>
+				<p id="entertainmentAmt"></p>
+			</td>
+		</tr>
+	</table>
+	<form><input type="button" name="entertainmentExpand" value="See Breakdown"></form>
+</div>
+
+
+<div id="entertainmentExpand" class="breakdown popupForm" hidden><div class="addExpenseContent">
+	<h3>Entertainment Breakdown</h3><br>
+	<p class="bold">Total</p>
+	<p class="normal" id="entertainmentBreak"></p>
+	<div id="entertainmentBreakdown"></div>
+	<form><input type="button" name="entertainmentAdd" value="Add Expense" onclick="entertainmentAddPopup();">
+	<input type="button" name="closeEntertainmentBreakDown" value="close" id="entertainmentClose"></form>
+</div></div>
+	
+<div class="popupForm" id="entertainmentAdd">
+	<div class="addExpenseContent">
+	<form name="newEntertainment">
+		<h3>Add Expense</h3>
+		
+		<label for="store">Store or Website</label>
+		<input type="text" placeholder="Store Name" name="store" required><br>
+		
+		<label for="amount">Amount</label>
+		<input type="number" placeholder="Amount" name="amount" required>
+		
+		<button type="button" onclick="addEntertainmentExpense();">Submit</button>
+		<input type="button" name="closeEntertainmentAdd" value="close" id="entertainmentClose">
+	</form>
+	</div>
+</div>
+	
+<script src="cookies.js"></script>
+<script src="expenses.js"></script>
+<script src="scripts.js"></script>
+<script src="cache.js"></script>
+</body>
+</html>
