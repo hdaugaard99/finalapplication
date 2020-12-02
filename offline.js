@@ -7,7 +7,7 @@ self.addEventListener('install', (e) => {
 var cacheName = 'finalapplication';
 
 var urlsToCache = [
-    '/',
+    
     '/analysis.html',
     '/analysis.js',
     '/cache.js',
@@ -18,7 +18,7 @@ var urlsToCache = [
     '/offline.js',
     '/serviceworker.js',
     '/sw.js',
-    '/questions.html',
+    '/finalapplication/questions.html',
     '/spendingchart.html',
     '/piechart.js',
     '/scripts.js',
