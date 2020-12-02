@@ -15,19 +15,19 @@ if ('serviceWorker' in navigator) {
 var cache = "cache";
 var urlsToCache = [
     '/',
-    '/analysis.html',
-    '/expenses.html',
-    '/index.html',
-    '/questions.html',
-    '/spendingchart.html',
-    '/piechart.js',
-    '/scripts.js',
-    '/analysis.js',
-    '/cookies.js',
-    '/expenses.js',
-    '/questions.js',
-    '/styles.css',
-    '/mediaqueries.css'
+    '/finalapplication/analysis.html',
+    '/finalapplication/expenses.html',
+    '/finalapplication/index.html',
+    '/finalapplication/questions.html',
+    '/finalapplication/spendingchart.html',
+    '/finalapplication/piechart.js',
+    '/finalapplication/scripts.js',
+    '/finalapplication/analysis.js',
+    '/finalapplication/cookies.js',
+    '/finalapplication/expenses.js',
+    '/finalapplication/questions.js',
+    '/finalapplication/styles.css',
+    '/finalapplication/mediaqueries.css'
 ];
 
 self.addEventListener('install', function(event) {
