@@ -1,36 +1,41 @@
 // JavaScript Document
 
-self.addEventListener('install', function(e) {
- e.waitUntil(
-   caches.open('video-store').then(function(cache) {
-     return cache.addAll([
-       'index.html',
-       'index.js',
-       'style.css',
-       'analysis.html',
-		'analysis.js',
-		'appicon.png',
-		'cache.js',
-		'cookies.js',
-		'expenses.html',
-		'expenses.js',
-		'manifest.json',
-		'mediaqueries.css',
-		'piechart.js',
-		'questions.html',
-		'questions.js',
-		'scripts.js',
-		'spendingchart.html'
-     ]);
-   })
- );
+self.addEventListener('install', (e) => {
+    console.log('[Service Worker] Install');
 });
 
-self.addEventListener('fetch', function(e) {
-  console.log(e.request.url);
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
+var cacheName = 'finalapplication';
+
+var urlsToCache = [
+    '/',
+    '/analysis.html',
+    '/analysis.js',
+    '/cache.js',
+    '/cookies.js',
+    '/expenses.html',
+    '/index.html',
+    '/manifest.json',
+    '/offline.js',
+    '/serviceworker.js',
+    '/sw.js',
+    '/questions.html',
+    '/spendingchart.html',
+    '/piechart.js',
+    '/scripts.js',
+    '/analysis.js',
+    '/cookies.js',
+    '/expenses.js',
+    '/questions.js',
+    '/styles.css',
+    '/mediaqueries.css'
+];
+
+self.addEventListener('install', (e) => {
+  console.log('[Service Worker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then((cache) => {
+          console.log('[Service Worker] Caching all: app shell and content');
+      return cache.addAll(urlsToCache);
     })
   );
 });
