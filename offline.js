@@ -26,7 +26,7 @@ var urlsToCache = [
     '/analysis.js',
     '/cookies.js',
     '/expenses.js',
-    '/questions.js',
+    '/finalapplication/questions.js',
     '/styles.css',
     '/mediaqueries.css'
 ];
