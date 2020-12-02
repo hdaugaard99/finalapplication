@@ -28,27 +28,28 @@ if ('serviceWorker' in navigator) {
 var cacheName = 'finalapplication';
 
 var urlsToCache = [
+    '/',
     '/finalapplication',
-    '/finalapplication/analysis.html',
-    '/finalapplication/analysis.js',
-    '/finalapplication/cache.js',
-    '/finalapplication/cookies.js',
-    '/finalapplication/expenses.html',
-    '/finalapplication/index.html',
-    '/finalapplication/manifest.json',
-    '/finalapplication/offline.js',
-    '/finalapplication/serviceworker.js',
-    '/finalapplication/sw.js',
-    '/finalapplication/questions.html',
-    '/finalapplication/spendingchart.html',
-    '/finalapplication/piechart.js',
-    '/finalapplication/scripts.js',
-    '/finalapplication/analysis.js',
-    '/finalapplication/cookies.js',
-    '/finalapplication/expenses.js',
-    '/finalapplication/questions.js',
-    '/finalapplication/styles.css',
-    '/finalapplication/mediaqueries.css'
+    '/analysis.html',
+    '/analysis.js',
+    '/cache.js',
+    '/cookies.js',
+    '/expenses.html',
+    '/index.html',
+    '/manifest.json',
+    '/offline.js',
+    '/serviceworker.js',
+    '/sw.js',
+    '/questions.html',
+    '/spendingchart.html',
+    '/piechart.js',
+    '/scripts.js',
+    '/analysis.js',
+    '/cookies.js',
+    '/expenses.js',
+    '/questions.js',
+    '/styles.css',
+    '/mediaqueries.css'
 ];
 
 self.addEventListener('install', (e) => {
