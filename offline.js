@@ -17,7 +17,7 @@ self.addEventListener('install', (e) => {
 var cacheName = 'finalapplication';
 
 var urlsToCache = [
-    
+    '/finalapplication',
     '/finalapplication/analysis.html',
     '/finalapplication/analysis.js',
     '/finalapplication/cache.js',
