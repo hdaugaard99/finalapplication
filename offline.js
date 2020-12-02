@@ -3,16 +3,7 @@ if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('offlinecache.js');
     
  console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-        // Registration failed
-
-        console.log('ServiceWorker registration failed: ', err);
-    });
-});
-
-self.addEventListener('install', (e) => {
-    console.log('[Service Worker] Install');
-});
+ };
 
 var cacheName = 'finalapplication';
 
