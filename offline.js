@@ -28,7 +28,7 @@ var urlsToCache = [
     '/finalapplication/offline.js',
     '/finalapplication/serviceworker.js',
     '/finalapplication/sw.js',
-    '/finalapplication/finalapplication/questions.html',
+    '/finalapplication/questions.html',
     '/finalapplication/spendingchart.html',
     '/finalapplication/piechart.js',
     '/finalapplication/scripts.js',
