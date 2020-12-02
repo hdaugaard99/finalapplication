@@ -1,5 +1,7 @@
 {
 "background_color": "#EDF6FF",
+	
+"theme_color": "#1FAEE4",
 
 "description": "This app helps you evaluate your budget and highlights areas of your spending that could be improved.",
 
