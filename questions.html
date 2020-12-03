@@ -13,8 +13,10 @@
 </head>
 
 <body>
+	<!-- Top banner -->
 	<h1 id="banner">Budget Evaluator</h1>
 	
+	<!-- Questions to and answer boxes, all required -->
 	<form name="questions">
 	<div id="income">
 		<p>First of all, to get an accurate picture of your financial situation, we need to know about how much you earn in a year.</p>
@@ -137,7 +139,8 @@
 		<label>$</label><input type="number" name="shortTermGoal"><br><br>
 		<input type="button" name="shortTermGoalSubmit" value="Finish Budget Profile" onclick="WriteShortTermGoal();">
 	</div>
-		
+	
+	<!-- Button opens spending chart page -->
 	<div id="submitProfile" hidden>
 		<input type="button" name="submitProfile" value="Create Budget Profile" onclick="window.location.href='spendingchart.html'">
 	</div>
