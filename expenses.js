@@ -1,5 +1,5 @@
 // JavaScript Document
-
+// Puts cookies into an array
    var allcookies = document.cookie;
 	var values = [];
                
@@ -13,7 +13,7 @@
                }
 var numbers = values.map(Number);
 
-
+// Assigns array values to their corresponding variables
 var numOfPeople = numbers[9];
 var groceriesNumber = numbers[7];
 var gasNumber = numbers[6];
@@ -21,7 +21,7 @@ var paymentsNumber = numbers[5];
 var entertainmentNumber = numbers[4];
 
 
-
+// Adds a dollar sign before each value
 document.getElementById('groceriesAmt').innerHTML = "$" + values[7];
 document.getElementById('groceriesBreak').innerHTML = "$" + values[7];
 document.getElementById('gasAmt').innerHTML = "$" + values[6];
@@ -33,6 +33,7 @@ document.getElementById('entertainmentBreak').innerHTML = "$" + values[3];
 
 var paragraph  = document.createElement("P");
 
+// Adds a new expense to the corresponding category after the user clicks the add expense button
 function addGroceriesExpense() {
 	$("#groceriesBreakdown").append("<p class='bold'>" + document.newGrocery.store.value + "</p><p class='normal'>$" + document.newGrocery.amount.value + "</p><br>");
 }
@@ -49,6 +50,7 @@ function addEntertainmentExpense() {
 	$("#entertainmentBreakdown").append("<p class='bold'>" + document.newEntertainment.store.value + "</p><p class='normal'>$" + document.newEntertainment.amount.value + "</p><br>");
 }
 
+// Opens the corresponding popover for each category based on the button clicked
 $(document).ready(function(){
 	$("input[name='groceriesExpand']").click(function(){
 		
@@ -103,7 +105,7 @@ $(document).ready(function(){
 
 
 
-
+// Closes popover when close button is clicked
 document.getElementById("groceriesClose").onclick = function() {
 	document.getElementById("groceriesExpand").style.display = "none";
 }
@@ -123,7 +125,7 @@ document.getElementById("entertainmentClose").onclick = function() {
 	document.getElementById("entertainmentExpand").style.display = "none";
 }
 
-
+// Code that opens and closes the add expense popover for each corresponding category
 var groceriesAdd = document.getElementById("groceriesAdd");
 
 var groceriesAddBtn = document.getElementById("groceriesAddBtn");
