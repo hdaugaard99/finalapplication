@@ -1,5 +1,6 @@
 // JavaScript Document
 
+// Controls which questions is visible and shows next question when each question is answered.  Shows alert if there is no input for an answer
 $(document).ready(function(){
 	$("input[name='incomeSubmit']").click(function(){
 		
