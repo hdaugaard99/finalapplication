@@ -1,3 +1,5 @@
+// Registers service worker in sw.js file
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
     navigator.serviceWorker.register('sw.js').then(function(registration) {
@@ -12,6 +14,7 @@ if ('serviceWorker' in navigator) {
 });
 };
 
+// List of urls to cache
 var cache = "cache";
 var urlsToCache = [
     '/',
@@ -30,6 +33,7 @@ var urlsToCache = [
     '/finalapplication/mediaqueries.css'
 ];
 
+// Saves url in cache when it is opened
 self.addEventListener('install', function(event) {
     // Perform install steps
 
