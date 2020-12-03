@@ -1,5 +1,6 @@
 // JavaScript Document
 
+// Saves answer to each question in survey in a cookie
  function WriteIncome() {
                if( document.questions.income.value == "" ) {
                   alert("Enter some value!");
@@ -111,6 +112,7 @@ function WriteGroceries() {
             } 
 
 
+// Puts all cookie values into an array
     var allcookies = document.cookie;
 	var values = [];
                
@@ -124,7 +126,7 @@ function WriteGroceries() {
                }
 var numbers = values.map(Number);
 
-
+// Sets array values to corresponding variables
 var numOfPeople = numbers[9];
 var groceriesNumber = numbers[7];
 var gasNumber = numbers[6];
@@ -132,7 +134,7 @@ var paymentsNumber = numbers[5];
 var entertainmentNumber = numbers[4];
 
 
-
+// Each switch/case statement determines the outputs for the analysis page
 switch (true) {
 	case (numOfPeople == 1 && groceriesNumber <= 250):
 		$("#groceriesAnalysis").append("Looks like your spending is about right in this area");
