@@ -1,5 +1,6 @@
 // JavaScript Document
 
+// Makes pop over visible when 'More Info' button is clicked
 $(document).ready(function(){
 	$("input[name='groceriesInfo']").click(function(){
 		
@@ -53,6 +54,7 @@ $(document).ready(function(){
 	});
 });
 
+// Popover is hidden for each section when close button is clicked
 
 document.getElementById("groceriesClose").onclick = function() {
 	document.getElementById("groceries").style.display = "none";
