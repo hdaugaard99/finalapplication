@@ -1,7 +1,7 @@
 // JavaScript Document
 
 
-
+// Makes navigation bar responsive
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -12,7 +12,7 @@ function myFunction() {
 }
 
 
-
+// Registers service worker
 if('serviceWorker' in navigator) {
   navigator.serviceWorker
            .register('offline.js')
