@@ -1,4 +1,6 @@
 // JavaScript Document
+
+// Registers service worker in offlinecache.js
 if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('offlinecache.js').then(function(registration) {
         // Registration successful
@@ -11,6 +13,7 @@ if('serviceWorker' in navigator) {
     });
  };
 
+// Registers service worker in sw.js
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
     navigator.serviceWorker.register('sw.js').then(function(registration) {
@@ -25,8 +28,9 @@ if ('serviceWorker' in navigator) {
 });
 };
 
-var cacheName = 'finalapplication';
+var cacheName = '/finalapplication';
 
+// Urls to be cached
 var urlsToCache = [
     '/',
     '/finalapplication',
@@ -52,6 +56,7 @@ var urlsToCache = [
     '/finalapplication/mediaqueries.css'
 ];
 
+// Caches urls when home page is opened
 self.addEventListener('install', (e) => {
   console.log('[Service Worker] Install');
   e.waitUntil(
