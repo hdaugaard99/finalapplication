@@ -1,6 +1,6 @@
 // JavaScript Document
 
-
+// Uses Google API to create pie chart using values given by the user during the survey
 google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
