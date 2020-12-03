@@ -1,7 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/* Media queries for css styles */
 
+/* Heading styles */
 @media only screen and (max-width: 600px) {
 	#title {
 	font-size: 6em;
@@ -15,8 +17,10 @@ h2 {
 	font-size: 48px;
 	text-align: center;
 }
-	
+
+/* Navigation styles */
 @media screen and (max-width: 600px) {
+
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -40,13 +44,14 @@ h2 {
   }
 }
 	
-	
+/* Start evaluation button styles */	
 #start {
 	font-size: 36px;
 	padding: 18px 26px;
 	border-radius: 80px;
 }
-	
+
+/* Questions styles */
 form p {
 	font-size: 36px;
 	font-weight: bold;
@@ -54,6 +59,7 @@ form p {
 	margin-top: 20%;
 }
 
+/* Expenses and analysis card styles */
 .expenseCard input[type="button"] {
 	font-size: 20px;
 	padding-left: 12px;
@@ -89,6 +95,7 @@ form p {
 		font-size: 20px;
 	}
 	
+	/* Popover styles */
 	.popupForm label {
 		font-size: 30px;
 	}
